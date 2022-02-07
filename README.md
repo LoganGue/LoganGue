@@ -4,7 +4,7 @@
 int main() {
     int c, n;
 
-    printf("Four random numbers for 2 Factor Authentication: \n"); //printf is a function. This manages the complexity of information by giving a quick and easy explanation of the output
+    printf("Four random numbers for 2 Factor Authentication: \n"); // This is a union I built previously because it only stores on variable/ outcome at once (the 4 digit code)
 
     for (c = 1; c <= 4; c++) {
         n = rand() % 9 + 1;
@@ -12,24 +12,27 @@ int main() {
     }
     void main()
     {
-        char customer_satisfaction[30], ans; // this is a pointer because the address of the variable is in another variable (whether the user says yes or no)
+        char customer_satisfaction[30], ans; 
         float ans;
 
-        printf("Thank you for verifying \n"); // the user will see this after receving their first initial code
+        printf("Thank you for verifying \n"); 
 
-        printf("Did you get your number? (Y/N)\n"); // this is a pointer because the address of the variable is in another variable (whether the user says yes or no)
-        scanf("%c", ans); // scanf is a user defined function. The user decides if they got their code or not
+        printf("Did you get your number? (Y/N)\n"); // This is a union because even though their are two possible outputs (Y/N), there is only one variable given
+        scanf("%c", ans); 
 
-        if (ans == 'Y') // if they did get their code they will get the following message
+        if (ans == 'Y') 
         {
-            printf("Great, you may now close the browser \n"); // the user is good to go
+            printf("Great, you may now close the browser \n"); 
 
         }
-        if (ans == 'N') // if they did not get their code, they will get the following message
+        if (ans == 'N') // This is a structure because this line of code contains multiple variables. It will send a message, send a code, and print the code
         {
-            printf("Please request code again \n"); // their next step if they need a new code
+            printf("Requesting code again \n"); 
+            for (c = 4; c <= 9; c++) {
+                n = rand() % 7 + 1;
+                printf("%d\n", n);
         }
     }
 
-    return 0; //end 
+    return 0;  
 }
